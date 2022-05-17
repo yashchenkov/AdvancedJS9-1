@@ -2,15 +2,17 @@ import Magician from '../Magician';
 import Daemon from '../Daemon';
 
 test('testing Magician attack', () => {
-  const mage = new Magician(100);
-  mage.setAttack(2);
+  const mage = new Magician();
+  mage.attack = 100;
+  mage.stoned = true;
 
-  expect(mage.getAttack()).toEqual(85);
+  expect(mage.attack).toEqual(85);
 });
 
 test('testing Daemon attack', () => {
-  const mage = new Daemon(100);
-  mage.setAttack(2);
+  const daemon = new Daemon();
+  daemon.attack = 100;
+  daemon.stoned = true;
 
-  expect(mage.getAttack()).toEqual(85);
+  expect(daemon.attack).toEqual(85);
 });
